@@ -1,0 +1,3 @@
+Y:\Projects\GitHub\SwiftLaunch\SwiftLaunch\bin\Debug\SwiftLaunch.exe
+Y:\Projects\GitHub\SwiftLaunch\SwiftLaunch\obj\x86\Debug\Interop.IWshRuntimeLibrary.dll
+Y:\Projects\GitHub\SwiftLaunch\SwiftLaunch\obj\x86\Debug\SwiftLaunch.csproj.ResolveComReference.cache
