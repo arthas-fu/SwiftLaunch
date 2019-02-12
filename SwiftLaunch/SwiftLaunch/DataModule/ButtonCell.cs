@@ -122,27 +122,21 @@ namespace SwiftLaunch.DataModule
 
             try
             {
-                String lString = String.Format(@"{0}{1}", this.mLaunchLink, this.mLaunchArgs);
+                //String lString = String.Format(@"{0}{1}", this.mLaunchLink, this.mLaunchArgs);
                 //if (File.Exists(this.mLaunchLink) || Directory.Exists(this.mLaunchLink))
-                {
-                    Process.Start(lString);
-                }
+                //{
+                //    Process.Start(lString);
+                //}
 
                 //string targetPath = string.Format("C:\\Windows\\Installer\\{{90140000-0011-0000-0000-0000000FF1CE}}");
-                //    // Process:提供对本地和远程进程的访问并使你能够启动和停止本地系统进程
-                //Process process = new Process();
+                Process process = new Process();
 
-                //// 初始化可执行文件的一些基础信息
-                //process.StartInfo.WorkingDirectory = @targetPath; // 初始化可执行文件的文件夹信息
-                //process.StartInfo.FileName = "xlicons.exe"; // 初始化可执行文件名
+                //process.StartInfo.WorkingDirectory = this.mLaunchLink;
+                process.StartInfo.FileName = this.mLaunchLink;
+                process.StartInfo.Arguments = this.mLaunchArgs;
+                process.StartInfo.UseShellExecute = true;
 
-                //// 当我们需要给可执行文件传入参数时候可以设置这个参数
-                //// "para1 para2 para3" 参数为字符串形式，每一个参数用空格隔开
-                //process.StartInfo.Arguments = this.mLaunchArgs;
-                //process.StartInfo.UseShellExecute = true;        // 使用操作系统shell启动进程
-
-                //// 启动可执行文件
-                //process.Start();
+                process.Start();
 
             }
             catch (Exception e)

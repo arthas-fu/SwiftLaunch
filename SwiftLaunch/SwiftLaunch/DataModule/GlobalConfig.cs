@@ -150,7 +150,7 @@ namespace SwiftLaunch.DataModule
             lRootXml.AppendChild(lGlobalConfigXml);
 
             XmlElement lTabsXml = lXmlDocument.CreateElement("", "Tabs", "");
-            lTabsXml.SetAttribute("Count", this.mTabCount.ToString());
+            lTabsXml.SetAttribute("Count", this.mTabNameList.Count.ToString());
             lRootXml.AppendChild(lTabsXml);
 
             foreach (String lTabName in this.mTabNameList)
